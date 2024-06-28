@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Color Flipper</title>
+    <link rel="stylesheet" href="test.css" />
+  </head>
+  <body id="body">
+    <div class="content">
+      <div class="color">
+        <h2>Background Color:</h2>
+        <p id="color"></p>
+      </div>
+      <div class="change">
+        <button id="button" onclick="changeColor()">CLICK ME</button>
+      </div>
+    </div>
+    <script>
+      let colors = ["aliceblue", "darksalmon", "crimson", 'white']; 
+      let i = 0;
+
+      function changeColor() {
+        let body = document.getElementById("body");
+        document.getElementById("color").innerHTML = colors[i];
+        body.style.backgroundColor = colors[i];
+        i = (i + 1) % colors.length;
+      }
+    </script>
+  </body>
+</html>

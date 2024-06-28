@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h2>JavaScript Trials</h2>
+    <p id="demo"></p>
+    <!-- <button onclick="myFunction()">Click me</button> -->
+
+    <script>
+      const numbers = [45, 4, 9, 16, 25];
+
+      const newNumbers = numbers.map((number) => number*2);
+      const newNumbers1 = numbers.filter((number) => number > 18);
+      document.getElementById('demo').innerHTML = newNumbers1;
+
+      // let txt = "";
+      // numbers.forEach(myFunction);
+      // document.getElementById("demo").innerHTML = txt;
+
+      // function myFunction(value) {
+      //   txt += value + "<br>";
+      // }
+      // const person = {firstName:"John", lastName:"Doe"};
+      // document.getElementById("demo").innerHTML = person.firstName + ' ' + person.lastName;
+
+      // let names=['Taline', 'Ahmad', 'Abbas'];
+      // let i=0;
+      //   function myFunction() {
+      //     document.getElementById('demo').innerHTML= names[i];
+      //     i= (i+1) % names.length;
+      //   }
+    </script>
+  </body>
+</html>

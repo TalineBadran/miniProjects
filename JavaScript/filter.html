@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <body>
+    <h1 style="text-align: center;">Young users</h1>
+    <div id="young-users"></div>
+    <h1 style="text-align: center;">Old users</h1>
+    <div id="old-users"></div>
+    <h1 style="text-align: center;">Bruno?</h1>
+    <p id="find"></p>
+    <script>
+      let users = [
+        { firstName: "Susan", age: 14 },
+        { firstName: "Daniel", age: 16 },
+        { firstName: "Bruno", age: 56 },
+        { firstName: "Jacob", age: 15 },
+        { firstName: "Sam", age: 64 },
+        { firstName: "Dave", age: 56 },
+        { firstName: "Neils", age: 65 },
+      ];
+
+      const young = users.filter((user) => {
+        return user.age <= 15;
+      });
+
+      const old = users.filter((user) => {
+        return user.age >= 50;
+      });
+
+      const Bruno = users.find((person) => person.firstName === "Bruno");
+
+      document.getElementById("young-users").innerHTML = young.map(user => `${user.firstName} ${user.age}`).join(", ");
+      document.getElementById("old-users").innerHTML = old.map(user =>  `${user.firstName} ${user.age}`).join(", ");
+      document.getElementById("find").innerHTML = `${Bruno.firstName} ${Bruno.age}`;
+    </script>
+  </body>
+</html>

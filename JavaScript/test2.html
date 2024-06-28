@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+    <body>
+        <button id="button" onclick="toUpp()">Click Me</button>
+        <p id="upp">taline</p>
+        <script>
+            let par = document.getElementById('upp');
+            const toUpp = () => {
+            par.innerHTML = par.innerHTML.toUpperCase();
+            par.style.color = 'red';
+            document.getElementById('button').style.backgroundColor = 'yellow';
+            }
+        </script>
+    </body>
+</html>
